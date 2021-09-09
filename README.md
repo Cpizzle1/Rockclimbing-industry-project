@@ -19,3 +19,4 @@
     - * create secure https certificate through aws/dns for security reasons
     - * incorporate climbing recommendation system with Machine learing algos w/ collaborative/content/hybrid 
     - * add training content and static files for image links
+    - * add chat app between users

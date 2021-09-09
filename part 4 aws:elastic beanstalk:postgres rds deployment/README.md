@@ -12,3 +12,8 @@
     - * virtual environments used for development and deployment
 
 ## 3) code not uploaded for security/production reasons. but visit http://www.wikiclimber.com to see website.
+
+## 4) Things still to do:
+    - * create secure https certificate through aws/dns for security reasons
+    - * incorporate climbing recommendation system with Machine learing algos w/ collaborative/content/hybrid 
+    - * decide on which climbers to add

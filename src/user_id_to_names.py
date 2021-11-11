@@ -7,6 +7,14 @@ import datetime
 from tqdm import tqdm
 
 def get_ids(path):
+    """[takes csv files from path folder, checks if csv is empty, converts date columns to days
+    queries database.sqlite for file with same name as route, convert that date column to same date format
+    drops duplicate rows with dates and merges dataframes on date column. Then drops all columns except
+    'user_id', 'userAvatar', 'userName' and returns dataframe and list of csvs that encountered errors]
+
+    Args:
+        path ([string]): [filepath to folder filled with csvs]
+    """
 
     os.chdir(path)
     result1 = glob.glob('*.{}'.format('csv'))

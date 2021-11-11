@@ -41,13 +41,19 @@
 
 ![climbs per month boulders](images/reviews_per_month.png)
 
-## 
-0.6343692732918376
+## Prediction Model Performance
+
 Light GBM Classifer model has accuracy of 63.4% (0.6343692732918376)
 - hyperparameters with Random Search CV with 5-fold cross-validation
 
     {'subsample_freq': 20, 'subsample': 0.7, 'reg_lambda': 1.3, 'reg_alpha': 1.2, 'num_leaves': 200, 'n_estimators': 400, 'min_split_gain': 0.3, 'max_depth': 20, 'colsample_bytree': 0.7}
-# The confusion Matrix is 
+### The confusion Matrix is 
+
+![confusion matrix](images/confusion_matrix.png)
+
+![confusion matrix non normal](images/confusion_matrix_non_normal.png)
+
+![feature importance](images/feature_importance.png)
 
 
 

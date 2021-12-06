@@ -63,15 +63,15 @@ def fix_11c(df, df_sqlite_full):
 if __name__ =="__main__":
     df = pd.read_csv('/Users/cp/Documents/dsi/8a_kaggle/routes_full.csv')
     # param_dic = param_dic = {
-    #         "host"      : "localhost",
+    #         "host"      : "*****",
   
-    #         # "database"  : 'wikiclimber2_db',
-    #         "database"  : 'cp',
+    #         # "database"  : '*********',
+    #         "database"  : '**',
     
-    #         "user"      : 'postgres',
+    #         "user"      : '*******',
     
     
-    #         "password"  : "megaball"
+    #         "password"  : "*****"
         
     # }
 

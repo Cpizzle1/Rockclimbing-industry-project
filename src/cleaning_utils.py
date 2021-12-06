@@ -35,6 +35,14 @@ def clean_climber_details_from_user_deets(path, pattern):
     return frame
 
 def combine_ascent_csvs(path):
+    """[combines all scraped data to a single large dataframe with duplicates dropped]
+
+    Args:
+        path ([string]): [path to folder with csvs]
+
+    Returns:
+        [dataframe]: [combined dataframe from all csvs with duplicates dropped]
+    """
     # path = '/Users/cp/Documents/dsi/8a2/8a_scraper/'
     # extension = 'csv'
     os.chdir(path)
@@ -116,6 +124,14 @@ def combine_ascent_csvs(path):
 
 
 def get_user_ids2(csv_file):
+    """[gets user names from useravatar data]
+
+    Args:
+        csv_file ([csv]): [csv with all data combined]
+
+    Returns:
+        [dataframe]: [extracted names of users]
+    """
     df = pd.read_csv(csv_file)
     df = df.drop_duplicates()
     df.userAvatar.fillna(value = 'disregard', inplace = True)
@@ -129,6 +145,10 @@ if __name__ == '__main__':
     # x = clean_climber_details('/Volumes/Backup Plus/climber_deets', "/Volumes/Backup Plus/climber_deets/climber-info-(.*?).csv")
     # print(x)
 
-    x = climber_ids('/Volumes/Backup Plus/climber_deets')
-    print(x)
-
+    # x = climber_ids('/Volumes/Backup Plus/climber_deets')
+    # print(x)
+    
+    # x = combine_ascent_csvs('', index = False)
+    # print(x.head)
+    # print(x.shape)
+    # x.to_csv('/Users/cp/Documents/dsi/github_wikiclimber_public/rock_climbing_project/src/boulders_full.csv')

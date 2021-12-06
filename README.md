@@ -1,5 +1,7 @@
 # Made public version of repo
 
+## please see individual folders of project to see most up to date code 
+
 ## 1) convert sqlite database --> csv files --> postgres database locally using pgAdmin4
     - * upload postgres sql backup to aws postgres rds instance to host information (big data)
 ## 2) create django app with +4million entries and +60,000 users, +25 features per entry

@@ -43,6 +43,15 @@ def postgresql_to_dataframe(conn, select_query, column_names):
 
 
 def fix_11c(df, df_sqlite_full):
+    """[fills gap of 11c routes with correct values]
+
+    Args:
+        df ([dataframe]): [newer dataframe with proper ratings, but unsorted]
+        df_sqlite_full ([dataframe]): [older data with missing/inforrect ratings]
+
+    Returns:
+        [dataframe]: [dataframe with correct 47 values]
+    """
     df_11c = df[df['difficulty']== '6c+']
     df_11c2 = df_11c[(df_11c['zlagGradeIndex'] >20) &  (df_11c['zlagGradeIndex'] <24)]
     df_11c2_dropped = df_11c2.drop_duplicates(keep = 'last')
